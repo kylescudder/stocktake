@@ -117,10 +117,10 @@
 
   <!-- Quick Stats Cards -->
   <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg">
+    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm rounded-lg">
       <div class="p-5">
         <div class="flex items-center">
-          <div class="flex-shrink-0">
+          <div class="shrink-0">
             <AlertTriangle class="h-6 w-6 text-red-400" />
           </div>
           <div class="ml-5 w-0 flex-1">
@@ -137,10 +137,10 @@
       </div>
     </div>
 
-    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg">
+    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm rounded-lg">
       <div class="p-5">
         <div class="flex items-center">
-          <div class="flex-shrink-0">
+          <div class="shrink-0">
             <BarChart3 class="h-6 w-6 text-blue-400" />
           </div>
           <div class="ml-5 w-0 flex-1">
@@ -157,10 +157,10 @@
       </div>
     </div>
 
-    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg">
+    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm rounded-lg">
       <div class="p-5">
         <div class="flex items-center">
-          <div class="flex-shrink-0">
+          <div class="shrink-0">
             <Activity class="h-6 w-6 text-green-400" />
           </div>
           <div class="ml-5 w-0 flex-1">
@@ -177,10 +177,10 @@
       </div>
     </div>
 
-    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg">
+    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm rounded-lg">
       <div class="p-5">
         <div class="flex items-center">
-          <div class="flex-shrink-0">
+          <div class="shrink-0">
             <TrendingDown class="h-6 w-6 text-yellow-400" />
           </div>
           <div class="ml-5 w-0 flex-1">
@@ -199,7 +199,7 @@
   </div>
 
   <!-- Low Stock Report -->
-  <div class="bg-white dark:bg-gray-800 shadow rounded-lg">
+  <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg">
     <div class="px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
       <h3 class="text-lg font-medium text-gray-900 dark:text-white">Low Stock Alert</h3>
       <Button 
@@ -274,14 +274,14 @@
   </div>
 
   <!-- Stock Value Report -->
-  <div class="bg-white dark:bg-gray-800 shadow rounded-lg">
+  <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg">
     <div class="px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
       <div class="flex items-center space-x-4">
         <h3 class="text-lg font-medium text-gray-900 dark:text-white">Stock Value by Warehouse</h3>
         <div>
           <select
             bind:value={selectedWarehouse}
-            class="rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white text-sm"
+            class="rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white text-sm"
           >
             <option value="">All Warehouses</option>
             {#each warehouses as warehouse}
@@ -350,7 +350,7 @@
   </div>
 
   <!-- Movement Summary -->
-  <div class="bg-white dark:bg-gray-800 shadow rounded-lg">
+  <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg">
     <div class="px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
       <div class="flex items-center space-x-4">
         <h3 class="text-lg font-medium text-gray-900 dark:text-white">Movement Summary</h3>
@@ -358,12 +358,12 @@
           <input
             type="date"
             bind:value={startDate}
-            class="rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white text-sm"
+            class="rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white text-sm"
           />
           <input
             type="date"
             bind:value={endDate}
-            class="rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white text-sm"
+            class="rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white text-sm"
           />
         </div>
       </div>

@@ -117,7 +117,7 @@
   </div>
 
   <!-- Products Table -->
-  <div class="bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden">
+  <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg overflow-hidden">
     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
       <thead class="bg-gray-50 dark:bg-gray-700">
         <tr>
@@ -215,7 +215,7 @@
         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Unit</label>
         <select
           bind:value={formData.unit}
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
         >
           <option value="piece">Piece</option>
           <option value="kg">Kilogram</option>
@@ -258,7 +258,7 @@
         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Unit</label>
         <select
           bind:value={formData.unit}
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
         >
           <option value="piece">Piece</option>
           <option value="kg">Kilogram</option>

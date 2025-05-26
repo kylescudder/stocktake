@@ -41,7 +41,7 @@
     
     <form class="mt-8 space-y-6" on:submit|preventDefault={handleRegister}>
       {#if error}
-        <div class="bg-red-50 dark:bg-red-900 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-200 px-4 py-3 rounded">
+        <div class="bg-red-50 dark:bg-red-900 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-200 px-4 py-3 rounded-sm">
           {error}
         </div>
       {/if}
@@ -76,7 +76,7 @@
           </label>
           <select
             bind:value={role}
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
           >
             <option value="staff">Staff</option>
             <option value="manager">Manager</option>

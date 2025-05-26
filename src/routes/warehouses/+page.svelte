@@ -134,10 +134,10 @@
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {#if loading}
       {#each Array(6) as _}
-        <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 animate-pulse">
-          <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-4"></div>
-          <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded w-1/2 mb-2"></div>
-          <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded w-2/3"></div>
+        <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg p-6 animate-pulse">
+          <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded-sm w-3/4 mb-4"></div>
+          <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded-sm w-1/2 mb-2"></div>
+          <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded-sm w-2/3"></div>
         </div>
       {/each}
     {:else if warehouses.length === 0}
@@ -148,10 +148,10 @@
       </div>
     {:else}
       {#each warehouses as warehouse}
-        <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+        <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg p-6">
           <div class="flex items-center justify-between">
             <div class="flex items-center">
-              <div class="flex-shrink-0">
+              <div class="shrink-0">
                 <MapPin class="h-8 w-8 text-primary-600" />
               </div>
               <div class="ml-3">
@@ -230,7 +230,7 @@
       <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Manager</label>
       <select
         bind:value={formData.manager}
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
       >
         <option value="">Select a manager</option>
         {#each users as user}
@@ -275,7 +275,7 @@
       <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Manager</label>
       <select
         bind:value={formData.manager}
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
       >
         <option value="">Select a manager</option>
         {#each users as user}

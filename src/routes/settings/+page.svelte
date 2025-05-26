@@ -164,7 +164,7 @@
 
   <!-- Tab Content -->
   {#if activeTab === 'profile'}
-    <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+    <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg p-6">
       <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4">Profile Information</h3>
       
       <form on:submit|preventDefault={updateProfile} class="space-y-4">
@@ -176,7 +176,7 @@
           <input
             value={profileData.role}
             disabled
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white sm:text-sm"
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-xs bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white sm:text-sm"
           />
           <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Contact an administrator to change your role.</p>
         </div>
@@ -188,7 +188,7 @@
     </div>
 
   {:else if activeTab === 'security'}
-    <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+    <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg p-6">
       <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4">Security Settings</h3>
       
       <div class="space-y-4">
@@ -225,7 +225,7 @@
     </div>
 
   {:else if activeTab === 'notifications'}
-    <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+    <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg p-6">
       <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4">Notification Preferences</h3>
       
       <form on:submit|preventDefault={updateNotifications} class="space-y-6">
@@ -241,7 +241,7 @@
                 bind:checked={notificationSettings.lowStockAlerts}
                 class="sr-only peer"
               />
-              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 dark:peer-focus:ring-primary-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-600"></div>
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-hidden peer-focus:ring-4 peer-focus:ring-primary-300 dark:peer-focus:ring-primary-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-600"></div>
             </label>
           </div>
 
@@ -256,7 +256,7 @@
                 bind:checked={notificationSettings.movementNotifications}
                 class="sr-only peer"
               />
-              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 dark:peer-focus:ring-primary-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-600"></div>
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-hidden peer-focus:ring-4 peer-focus:ring-primary-300 dark:peer-focus:ring-primary-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-600"></div>
             </label>
           </div>
 
@@ -271,7 +271,7 @@
                 bind:checked={notificationSettings.weeklyReports}
                 class="sr-only peer"
               />
-              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 dark:peer-focus:ring-primary-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-600"></div>
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-hidden peer-focus:ring-4 peer-focus:ring-primary-300 dark:peer-focus:ring-primary-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-600"></div>
             </label>
           </div>
 
@@ -286,7 +286,7 @@
                 bind:checked={notificationSettings.emailNotifications}
                 class="sr-only peer"
               />
-              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 dark:peer-focus:ring-primary-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-600"></div>
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-hidden peer-focus:ring-4 peer-focus:ring-primary-300 dark:peer-focus:ring-primary-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-600"></div>
             </label>
           </div>
         </div>
@@ -300,7 +300,7 @@
   {:else if activeTab === 'data'}
     <div class="space-y-6">
       <!-- Export Data -->
-      <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+      <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg p-6">
         <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4">Export Data</h3>
         <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
           Download a backup of your inventory data including products, warehouses, stock levels, and movement history.
@@ -313,7 +313,7 @@
       </div>
 
       <!-- Import Data -->
-      <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+      <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg p-6">
         <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4">Import Data</h3>
         <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
           Import inventory data from a backup file. This will merge with existing data.
@@ -410,7 +410,7 @@
   <div class="space-y-4">
     <div class="bg-yellow-50 dark:bg-yellow-900 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
       <div class="flex">
-        <div class="flex-shrink-0">
+        <div class="shrink-0">
           <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
           </svg>

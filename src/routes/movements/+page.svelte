@@ -260,13 +260,13 @@
   </div>
 
   <!-- Filters -->
-  <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+  <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
     <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
       <div>
         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Type</label>
         <select
           bind:value={selectedType}
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
         >
           <option value="">All Types</option>
           {#each movementTypes as type}
@@ -279,7 +279,7 @@
         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Product</label>
         <select
           bind:value={selectedProduct}
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
         >
           <option value="">All Products</option>
           {#each products as product}
@@ -292,7 +292,7 @@
         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Warehouse</label>
         <select
           bind:value={selectedWarehouse}
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
         >
           <option value="">All Warehouses</option>
           {#each warehouses as warehouse}
@@ -306,7 +306,7 @@
         <input
           type="date"
           bind:value={startDate}
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
         />
       </div>
 
@@ -315,7 +315,7 @@
         <input
           type="date"
           bind:value={endDate}
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
         />
       </div>
     </div>
@@ -336,7 +336,7 @@
   {/if}
 
   <!-- Movements List -->
-  <div class="bg-white dark:bg-gray-800 shadow rounded-lg">
+  <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg">
     <div class="px-6 py-4 border-b border-gray-200 dark:border-gray-700">
       <h3 class="text-lg font-medium text-gray-900 dark:text-white">Movement History</h3>
     </div>
@@ -355,7 +355,7 @@
           {@const MovementIcon = getMovementIcon(movement.type)}
           <div class="p-6">
             <div class="flex items-start space-x-4">
-              <div class="flex-shrink-0">
+              <div class="shrink-0">
                 <svelte:component 
                   this={MovementIcon} 
                   class="h-6 w-6 {getMovementColor(movement.type)}" 
@@ -435,7 +435,7 @@
       <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Movement Type</label>
       <select
         bind:value={formData.type}
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
         required
       >
         {#each movementTypes as type}
@@ -448,7 +448,7 @@
       <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Product</label>
       <select
         bind:value={formData.product}
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
         required
       >
         <option value="">Select a product</option>
@@ -463,7 +463,7 @@
         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">From Warehouse</label>
         <select
           bind:value={formData.fromWarehouse}
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
           required={fromWarehouseRequired}
         >
           <option value={null}>Select a warehouse</option>
@@ -479,7 +479,7 @@
         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">To Warehouse</label>
         <select
           bind:value={formData.toWarehouse}
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm"
           required={toWarehouseRequired}
         >
           <option value={null}>Select a warehouse</option>

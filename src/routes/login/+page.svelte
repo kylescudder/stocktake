@@ -39,7 +39,7 @@
     
     <form class="mt-8 space-y-6" on:submit|preventDefault={handleLogin}>
       {#if error}
-        <div class="bg-red-50 dark:bg-red-900 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-200 px-4 py-3 rounded">
+        <div class="bg-red-50 dark:bg-red-900 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-200 px-4 py-3 rounded-sm">
           {error}
         </div>
       {/if}
