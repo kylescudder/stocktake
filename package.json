@@ -22,7 +22,7 @@
 		"date-fns": "4.1.0",
 		"lucide-svelte": "0.522.0",
 		"postcss": "8.4.32",
-		"svelte": "5.0.0",
+		"svelte": "5.38.1",
 		"svelte-check": "4.0.0",
 		"tailwindcss": "4.1.7",
 		"typescript": "5.8.2",
